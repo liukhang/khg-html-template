@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+		body{
+			font-family: 'Open Sans', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		.khg_header{
+			display: inline-block;
+			width: 100%;
+			height: 160px;
+			background: #482c3d;
+		}
+		.khg_header .khg_left{
+			width: 33.33%;
+			float: left;
+			color: #ffffff;
+			text-align: right;
+			padding: 62px 0;
+		}
+		.khg_header .khg_left span{
+			font-size: 26px;
+		}
+		.khg_header .khg_mid{
+			width: 33.33%;
+			float: left;
+			text-align: center;
+			padding: 25.5px 0;
+		}
+		.khg_header .khg_right{
+			width: 33.33%;
+			float: left;
+			text-align: center;
+			padding: 51.5px 0;
+		}
+		.store {
+			display: inline-block;
+		    width: 250px;
+		    padding: 10px 25px;
+		    border: 1px solid #ffffff;
+		    color: #ffffff;
+		    border-radius: 10px;
+		    position: relative;
+		    float: left;
+		}
+		.img_store {
+		    width: 20%;
+		    float: left;
+		}
+		.name {
+		    width: 80%;
+		    float: right;
+		    font-size: 22px;
+		    position: relative;
+	        background: url(./img/arrow.png) no-repeat right;
+		}
+		.store_content{
+			position: absolute;
+			width: 100%;
+			background: #eeeeee;
+			right: 0;
+			left: 0;
+			top: 62px;
+			list-style: none;
+			padding: 0;
+			display: none;
+		}
+		.store_content li{
+			display: inline-block;
+			width: 100%;
+			padding: 10px 0;
+			color: #333333;
+			font-size: 18px;
+			text-align: center;
+		}
+		.khg_content{
+			margin-top: -10px;
+			position: relative;
+
+			display: inline-block;
+			padding: 100px 0;
+			background: #f2f2f2;
+		    overflow: hidden;
+		}
+		.background{
+			position: relative;
+			width: 100%;
+			padding-left: 30px;
+		}
+		.background img{
+			width: 100%;
+		}
+		.mes{
+			width: 65%;
+			float: left;
+			z-index: 9;
+			position: relative;
+		}
+		.animal{
+			width: 35%;
+		    float: left;
+		    margin-left: -60px;
+		    padding-top: 50px;
+		}
+		.text {
+			position: absolute;
+		    width: 70%;
+		    top: 10%;
+		    left: 10%;
+		}
+		.text h1{
+			font-size: 53px;
+			font-weight: 700;
+			display: inline-block;
+			width: 100%;
+			margin: 0;
+		}
+		.text p{
+			font-size: 22px;
+			font-weight: 400;
+			display: inline-block;
+			width: 100%;
+		}
+		.text a{
+			font-size: 22px;
+			font-weight: 400;
+			display: inline-block;
+			width: 100%;
+			color: #ee6bb5;
+			text-decoration: underline;
+		}
+		.text a.button {
+		    color: #000000;
+		    text-align: center;
+		    padding: 15px 25px;
+		    border: 1px solid #000000;
+		    border-radius: 10px;
+		    width: auto;
+		    display: inline-block;
+		    margin-top: 50px;
+		    text-decoration: none;
+		}
+		.bottom{
+			width: 100%;
+			height: 11px;
+			background: #ff00a4;
+			display: inline-block;
+			margin-top: 140px;
+		}
+		@media only screen and (max-width: 1250px){
+			.text{
+				width: 60%;
+			}
+			.text h1{
+				font-size: 42px;
+			}
+			.text p, .text a{
+				font-size: 14px;
+			}
+			.text a.button{
+				margin-top: 20px;
+			}
+		}
+		@media only screen and (max-width: 991px){
+			.text h1{
+				font-size: 28px;
+			}
+			.khg_header .khg_left span, .name{
+				font-size: 14px;
+			}
+			.name{
+			    font-size: 14px;
+    			margin-top: 3px;
+			}
+			.store{
+				width: 180px;
+			}
+		}
+		@media only screen and (max-width: 770px){
+			.khg_content{
+				padding: 50px 0;
+			}
+			.khg_header{
+				height: auto;
+			    overflow: hidden;
+			}
+			.khg_header .khg_left {
+			    width: 100%;
+			    float: left;
+			    color: #ffffff;
+			    text-align: center;
+			    padding: 30px 0px;
+			}
+			.khg_header .khg_mid{
+				width: 100%;
+			}
+			.khg_header .khg_right {
+			    width: 100%;
+			    float: left;
+			    display: inline-block;
+			    text-align: center;
+			    padding: 30px 0px;
+			}
+			.store{
+				float: none;
+			}
+		}
+		@media only screen and (max-width: 742px){
+			.mes {
+			    width: 100%;
+			    float: none;
+			    z-index: 9;
+			    position: relative;
+			}
+			.background{
+				padding: 0;
+			}
+			.animal {
+			    width: 100%;
+			    float: none;
+			    margin: 0 auto;
+			    padding: 0;
+			    margin-top: -265px;
+			    position: relative;
+			    z-index: 9999;
+			}
+			.mes img{
+				width: 80%;
+			}
+			.animal img{
+				width: 45%;
+				float: right;
+			}
+			.khg_content{
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.text h1{
+				font-size: 18px;
+			}
+			.text a.button{
+				padding: 10px 15px;
+			}
+			.text {
+			    width: 50%;
+			}
+			@media only screen and (max-width: 560px){
+				.animal{
+					margin-top: 0;
+				}
+				.mes img{
+					width: 100%;
+				}
+				.text a.button{
+					margin-top: 10px;
+				}
+				.text p, .text a{
+					margin-top: 0;
+				}
+			}
+			@media only screen and (max-width: 414px){
+				.text {
+				    width: 70%;
+				    top: 3%;
+				}
+				.text p, .text a{
+					margin: 0;
+					font-size: 11px;
+				}
+				.text a.button{
+					padding: 5px 10px;
+				}
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="khg_header">
+		<div class="khg_left">
+			<span>+31 (0)412 622 731</span>
+		</div>
+		<div class="khg_mid">
+			<img src="./img/khg_logo.png" alt="">
+		</div>
+		<div class="khg_right">
+			<div class="store">
+				<div class="img_store">
+					<img src="./img/icon.png" alt="">
+				</div>
+				<div class="name">
+					<span>
+						English
+					</span>
+				</div>
+				<ul class="store_content">
+					<li>
+						English
+					</li>
+					<li>
+						Italy
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="khg_content">
+		<div class="background">
+			<div class="mes">
+				<img src="./img/mes.png" alt="">
+				<div class="text">
+					<h1>Welcome my friend!</h1>
+					<p>Before we can welcome you to our webshop we need your attention for the use of it:</p>
+					<a href="#">Terms and Conditions</a>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Use of Cookies</a>
+					<a href="#" class="button">Accept all and continue</a>
+				</div>
+			</div>
+			<div class="animal">
+				<img src="./img/animal.png" alt="">
+			</div>
+		</div>
+		<div class="bottom"></div>
+	</div>
+</body>
+</html>
